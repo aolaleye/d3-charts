@@ -62,8 +62,6 @@ function drawChart(data) {
     g.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x))
-        .select(".domain")
-        .remove();
 
     g.append("g")
         .call(d3.axisLeft(y))
@@ -78,10 +76,10 @@ function drawChart(data) {
     g.append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
+        .attr("stroke", "darkblue")
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round")
-        .attr("stroke-width", 1.5)
+        .attr("stroke-width", 2)
         .attr("d", line);
 }
 

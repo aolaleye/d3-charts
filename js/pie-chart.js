@@ -1,11 +1,11 @@
 
 let data = [
-    {"platform": "Android", "percentage": 40.11}, 
-    {"platform": "Windows", "percentage": 36.69},
-    {"platform": "iOS", "percentage": 13.06}
+    {"platform": "IOS", "percentage": 40.11}, 
+    {"platform": "Android", "percentage": 36.69},
+    {"platform": "Windows", "percentage": 13.06}
 ];
 
-let pieSVGWidth = 500, pieSVGHeight = 300, radius =  Math.min(pieSVGWidth, pieSVGHeight) / 2;
+let pieSVGWidth = 400, pieSVGHeight = 400, radius =  Math.min(pieSVGWidth, pieSVGHeight) / 2;
 let pieSVG = d3.select('.pie-chart')
     .attr("width", pieSVGWidth)
     .attr("height", pieSVGHeight);
@@ -42,4 +42,4 @@ arc.append("text")
         return "translate(" + label.centroid(d) + ")"; 
     })
     .attr("text-anchor", "middle")
-    .text(d => { return d.data.platform+": "+d.data.percentage+"%"; });
+    .text(d => { return d.data.percentage + "%"; });

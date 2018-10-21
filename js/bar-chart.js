@@ -1,7 +1,7 @@
 
 let dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
 
-let barSVGWidth = 500, barSVGHeight = 300, barPadding = 5;
+let barSVGWidth = 650, barSVGHeight = 300, barPadding = 5;
 let barWidth = (barSVGWidth / dataset.length);
 
 
