@@ -1,20 +1,20 @@
-// Creates Bar Chart
+
 let dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
 
-let svgWidth = 500, svgHeight = 300, barPadding = 5;
-let barWidth = (svgWidth / dataset.length);
+let barSVGWidth = 500, barSVGHeight = 300, barPadding = 5;
+let barWidth = (barSVGWidth / dataset.length);
 
 
-let svg = d3.select('svg')
-    .attr("width", svgWidth)
-    .attr("height", svgHeight);
+let barSVG = d3.select('.bar-chart')
+    .attr("width", barSVGWidth)
+    .attr("height", barSVGHeight);
     
-let barChart = svg.selectAll("rect")
+let barChart = barSVG.selectAll("rect")
     .data(dataset)
     .enter()
     .append("rect")
     .attr("y", d => {
-         return svgHeight - d 
+         return barSVGHeight - d 
     })
     .attr("height", d => { 
         return d; 
@@ -27,7 +27,7 @@ let barChart = svg.selectAll("rect")
     });
 
 // Adds Labels
-let text = svg.selectAll("text")
+let text = barSVG.selectAll("text")
     .data(dataset)
     .enter()
     .append("text")
@@ -35,7 +35,7 @@ let text = svg.selectAll("text")
         return d;
     })
     .attr("y", (d, i) => {
-        return svgHeight - d - 2;
+        return barSVGHeight - d - 2;
     })
     .attr("x", (d, i) => {
         return barWidth * i;

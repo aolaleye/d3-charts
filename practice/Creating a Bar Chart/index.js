@@ -5,7 +5,7 @@ let svgWidth = 500, svgHeight = 300, barPadding = 5;
 let barWidth = (svgWidth / dataset.length);
 
 
-let svg = d3.select('svg')
+let svg = d3.select('.bar-chart')
     .attr("width", svgWidth)
     .attr("height", svgHeight);
     
