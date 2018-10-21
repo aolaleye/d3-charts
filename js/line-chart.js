@@ -75,6 +75,7 @@ function drawChart(data) {
 
     g.append("path")
         .datum(data)
+        .attr("class", "data-line")
         .attr("fill", "none")
         .attr("stroke", "darkblue")
         .attr("stroke-linejoin", "round")

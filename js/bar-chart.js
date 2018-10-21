@@ -40,4 +40,4 @@ let text = barSVG.selectAll("text")
     .attr("x", (d, i) => {
         return barWidth * i;
     })
-    .attr("fill", "#A64C38");
+    .attr("fill", "rgb(150, 21, 0)");
