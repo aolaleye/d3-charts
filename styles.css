@@ -3,17 +3,100 @@ html, body {
     padding: 0;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+    width: 100%;
+    height: 500px;
+    padding: 60px 0;  
+}
+
+section {
+    width: 45%;
+    padding: 0 80px;
+    text-align: center;
+}
+
 /* Bar Chart */
+.bar-section {
+    background-color: #9fbf9a; 
+}
+
 .bar-chart {
-    background-color: #C7D9D9;
+    background-color: #cfe4cc;
+    padding: 100px 40px 0 40px;
+    box-shadow: -9px 12px 12px rgba(33, 33, 33, 0.32);
+    font-weight: bold;
 }
     
 .bar {
-    fill: #115D8C;
-    transition: 1s all;
+    fill: #274a5a;
+    transition: .5s all;
+    box-shadow: -9px 12px 12px rgba(33, 33, 33, 0.32);
 }
 
 .bar:hover {
-    fill: darkblue;
+    fill: #082a3a;
 }
 
+/* Pie Chart */
+.pie-section {
+    background-color: #cbdcd3;
+    flex-direction: row-reverse;
+}
+
+.pie-chart {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+aside {
+    padding: 10px 0;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.63);
+    margin: auto;
+}
+
+i {
+    padding: 0 10px;
+    margin-right: 5px;
+}
+
+aside p {
+    display: inline-block;
+    margin: 20px;
+}
+
+.ios {
+    background-color: rgb(31, 119, 180);
+}
+
+.android {
+    background-color: rgb(255, 127, 14);
+}
+
+.windows {
+    background-color: rgb(44, 160, 44);
+}
+
+/* Line Chart */
+.line-section {
+    background-color: rgba(62, 119, 138, 0.64);
+}
+
+.line-chart {
+    background-color: #d1e4ea;
+    padding: 20px;
+    box-shadow: -9px 12px 12px rgba(33, 33, 33, 0.32);
+}
